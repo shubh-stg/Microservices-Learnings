@@ -9,10 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.eazybytes</groupId>
-	<artifactId>accounts</artifactId>
+	<artifactId>loans</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>accounts</name>
-	<description>Microservices for accounts</description>
+    <packaging>jar</packaging>
+	<name>loans</name>
+	<description>Microservice for loans</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -93,6 +94,10 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+                    <image>
+                        <name>jainshubh123/${project.artifactId}:s4</name>
+                        <builder>paketobuildpacks/builder-jammy-tiny:latest</builder>
+                    </image>
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
